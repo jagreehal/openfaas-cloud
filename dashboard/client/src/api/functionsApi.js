@@ -12,7 +12,7 @@ class FunctionsApi {
       this.apiBaseUrl = `${window.BASE_HREF}api`;
     } else {
       this.baseURL = 'http://127.0.0.1:8080';
-      this.apiBaseUrl = '/api';
+      this.apiBaseUrl = process.env.REACT_APP_API_URL || '/api';
     }
 
     this.cachedFunctions = {};

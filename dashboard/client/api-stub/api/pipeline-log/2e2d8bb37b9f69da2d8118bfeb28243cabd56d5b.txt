@@ -1,0 +1,83 @@
+v: 2018-09-12 07:51:08.706226204 +0000 UTC local://context (.dockerignore)
+v: 2018-09-12 07:51:08.706914221 +0000 UTC local://dockerfile (Dockerfile)
+s: 2018-09-12 07:51:08.708154907 +0000 UTC transferring context: 0
+s: 2018-09-12 07:51:08.709781721 +0000 UTC transferring dockerfile: 0
+s: 2018-09-12 07:51:08.710127198 +0000 UTC transferring context: 0
+s: 2018-09-12 07:51:08.711439717 +0000 UTC transferring dockerfile: 36
+s: 2018-09-12 07:51:08.712132029 +0000 UTC transferring context: 2
+s: 2018-09-12 07:51:08.71403178 +0000 UTC transferring dockerfile: 1469
+v: 2018-09-12 07:51:08.706226204 +0000 UTC local://context (.dockerignore) 0.02s
+v: 2018-09-12 07:51:08.706914221 +0000 UTC local://dockerfile (Dockerfile) 0.03s
+v: (no timestamp available) docker-image://docker.io/tonistiigi/copy@sha256:476e0a67a1e4650c6adaf213269a2913deb7c52cbc77f954026f769d51e1a14e
+v: (no timestamp available) docker-image://docker.io/library/node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46
+v: (no timestamp available) /bin/sh -c addgroup -S app && adduser -S -g app app
+v: (no timestamp available) /bin/sh -c apk --no-cache add curl     && echo "Pulling watchdog binary from Github."     && curl -sSLf https://github.com/openfaas-incubator/of-watchdog/releases/download/0.2.7/of-watchdog > /usr/bin/fwatchdog     && chmod +x /usr/bin/fwatchdog     && apk del curl --no-cache
+v: (no timestamp available) /bin/sh -c mkdir -p /home/app
+v: (no timestamp available) local://context
+v: (no timestamp available) copy /src-0/package.json /dest/home/app/
+v: (no timestamp available) /bin/sh -c npm i
+v: (no timestamp available) copy /src-0/index.js /dest/home/app/
+v: (no timestamp available) copy /src-0/*.json /dest/home/app/function/
+v: (no timestamp available) /bin/sh -c npm i || :
+v: (no timestamp available) copy /src-0/function /dest/home/app/function/
+v: (no timestamp available) /bin/sh -c chown app:app -R /home/app     && chmod 777 /tmp
+s: 2018-09-12 07:51:09.202794615 +0000 UTC resolve docker.io/tonistiigi/copy@sha256:476e0a67a1e4650c6adaf213269a2913deb7c52cbc77f954026f769d51e1a14e 0
+s: 2018-09-12 07:51:09.202960663 +0000 UTC resolve docker.io/library/node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46 0
+s: 2018-09-12 07:51:09.203128318 +0000 UTC resolve docker.io/library/node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46 0
+v: 2018-09-12 07:51:09.203631811 +0000 UTC local://context
+v: 2018-09-12 07:51:09.208174624 +0000 UTC docker-image://docker.io/tonistiigi/copy@sha256:476e0a67a1e4650c6adaf213269a2913deb7c52cbc77f954026f769d51e1a14e 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC docker-image://docker.io/library/node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c addgroup -S app && adduser -S -g app app 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c apk --no-cache add curl     && echo "Pulling watchdog binary from Github."     && curl -sSLf https://github.com/openfaas-incubator/of-watchdog/releases/download/0.2.7/of-watchdog > /usr/bin/fwatchdog     && chmod +x /usr/bin/fwatchdog     && apk del curl --no-cache 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c mkdir -p /home/app 0.00s
+s: 2018-09-12 07:51:09.20800909 +0000 UTC transferring context: 0
+s: 2018-09-12 07:51:09.210575381 +0000 UTC transferring context: 37
+s: 2018-09-12 07:51:09.320611763 +0000 UTC transferring context: 1845342
+s: 2018-09-12 07:51:09.420695034 +0000 UTC transferring context: 4762406
+s: 2018-09-12 07:51:09.489627654 +0000 UTC transferring context: 5911182
+v: 2018-09-12 07:51:09.203631811 +0000 UTC local://context 0.31s
+v: 2018-09-12 07:51:09.208174624 +0000 UTC docker-image://docker.io/tonistiigi/copy@sha256:476e0a67a1e4650c6adaf213269a2913deb7c52cbc77f954026f769d51e1a14e 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC docker-image://docker.io/library/node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c addgroup -S app && adduser -S -g app app 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c apk --no-cache add curl     && echo "Pulling watchdog binary from Github."     && curl -sSLf https://github.com/openfaas-incubator/of-watchdog/releases/download/0.2.7/of-watchdog > /usr/bin/fwatchdog     && chmod +x /usr/bin/fwatchdog     && apk del curl --no-cache 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c mkdir -p /home/app 0.00s
+v: 2018-09-12 07:51:09.203631811 +0000 UTC local://context 0.31s
+v: 2018-09-12 07:51:09.516438421 +0000 UTC copy /src-0/package.json /dest/home/app/ 0.00s
+v: 2018-09-12 07:51:09.516438421 +0000 UTC /bin/sh -c npm i 0.00s
+v: 2018-09-12 07:51:09.208174624 +0000 UTC docker-image://docker.io/tonistiigi/copy@sha256:476e0a67a1e4650c6adaf213269a2913deb7c52cbc77f954026f769d51e1a14e 0.00s
+v: 2018-09-12 07:51:09.208174624 +0000 UTC docker-image://docker.io/tonistiigi/copy@sha256:476e0a67a1e4650c6adaf213269a2913deb7c52cbc77f954026f769d51e1a14e 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC docker-image://docker.io/library/node:8.9.4-alpine@sha256:6bb963d58da845cf66a22bc5a48bb8c686f91d30240f0798feb0d61a2832fc46 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c addgroup -S app && adduser -S -g app app 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c apk --no-cache add curl     && echo "Pulling watchdog binary from Github."     && curl -sSLf https://github.com/openfaas-incubator/of-watchdog/releases/download/0.2.7/of-watchdog > /usr/bin/fwatchdog     && chmod +x /usr/bin/fwatchdog     && apk del curl --no-cache 0.00s
+v: 2018-09-12 07:51:09.208191499 +0000 UTC /bin/sh -c mkdir -p /home/app 0.00s
+v: 2018-09-12 07:51:09.203631811 +0000 UTC local://context 0.31s
+v: 2018-09-12 07:51:09.516438421 +0000 UTC copy /src-0/package.json /dest/home/app/ 0.00s
+v: 2018-09-12 07:51:09.516438421 +0000 UTC /bin/sh -c npm i 0.00s
+v: 2018-09-12 07:51:09.203631811 +0000 UTC local://context 0.31s
+v: 2018-09-12 07:51:09.516693647 +0000 UTC copy /src-0/index.js /dest/home/app/ 0.00s
+v: 2018-09-12 07:51:09.517024258 +0000 UTC copy /src-0/*.json /dest/home/app/function/
+v: 2018-09-12 07:51:09.517024258 +0000 UTC copy /src-0/*.json /dest/home/app/function/ 0.21s
+v: 2018-09-12 07:51:09.725610082 +0000 UTC /bin/sh -c npm i || :
+l: 2018-09-12 07:51:13.344803137 +0000 UTC added 47 packages in 2.793s
+
+l: 2018-09-12 07:51:13.348155053 +0000 UTC npm WARN function@1.0.0 No description
+npm WARN function@1.0.0 No repository field.
+
+
+v: 2018-09-12 07:51:09.725610082 +0000 UTC /bin/sh -c npm i || : 3.69s
+v: 2018-09-12 07:51:13.420210198 +0000 UTC copy /src-0/function /dest/home/app/function/
+v: 2018-09-12 07:51:13.420210198 +0000 UTC copy /src-0/function /dest/home/app/function/ 0.22s
+v: 2018-09-12 07:51:13.640116756 +0000 UTC /bin/sh -c chown app:app -R /home/app     && chmod 777 /tmp
+v: 2018-09-12 07:51:13.640116756 +0000 UTC /bin/sh -c chown app:app -R /home/app     && chmod 777 /tmp 2.57s
+v: 2018-09-12 07:51:16.228014591 +0000 UTC exporting to image
+s: 2018-09-12 07:51:16.228042632 +0000 UTC exporting layers 0
+s: 2018-09-12 07:51:21.543390323 +0000 UTC exporting layers 0
+s: 2018-09-12 07:51:21.544586811 +0000 UTC exporting manifest sha256:23a9d95afc398c54d5e555e126d893a5c84169e016cd6d9dd96e4242046e8e97 0
+s: 2018-09-12 07:51:21.563803219 +0000 UTC exporting manifest sha256:23a9d95afc398c54d5e555e126d893a5c84169e016cd6d9dd96e4242046e8e97 0
+s: 2018-09-12 07:51:21.563825159 +0000 UTC exporting config sha256:f7a7654952bca01220c59a15ffa06c2fcd4fb704175b5f8ed4d813a18e3b8b9f 0
+s: 2018-09-12 07:51:21.574871449 +0000 UTC exporting config sha256:f7a7654952bca01220c59a15ffa06c2fcd4fb704175b5f8ed4d813a18e3b8b9f 0
+s: 2018-09-12 07:51:21.584675314 +0000 UTC pushing layers 0
+s: 2018-09-12 07:51:23.83832437 +0000 UTC pushing layers 0
+s: 2018-09-12 07:51:23.838366418 +0000 UTC pushing manifest for docker.io/ofcommunity/kenfdev-of-cloud-dashboard-of-cloud-dashboard:0.9.2-2e2d8bb 0
+s: 2018-09-12 07:51:24.276290878 +0000 UTC pushing manifest for docker.io/ofcommunity/kenfdev-of-cloud-dashboard-of-cloud-dashboard:0.9.2-2e2d8bb 0
+v: 2018-09-12 07:51:16.228014591 +0000 UTC exporting to image 8.05s

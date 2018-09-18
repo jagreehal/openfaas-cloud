@@ -1,0 +1,69 @@
+[{
+    "name": "kenfdev-contributors-page",
+    "image": "ofcommunity/kenfdev-faas-contributors-page-contributors-page:0.9.1-d28277b",
+    "invocationCount": 2,
+    "replicas": 1,
+    "labels": {
+        "Git-Cloud": "1",
+        "Git-DeployTime": "1536401680",
+        "Git-Owner": "kenfdev",
+        "Git-Repo": "faas-contributors-page",
+        "Git-SHA": "d28277b51338a86230847e5b23f94fa80985192a",
+        "app": "kenfdev-contributors-page",
+        "com.openfaas.scale.max": "4",
+        "com.openfaas.scale.min": "1",
+        "faas_function": "kenfdev-contributors-page",
+        "uid": "842294221"
+    }
+}, {
+    "name": "kenfdev-dashboard",
+    "image": "ofcommunity/kenfdev-of-cloud-dashboard-of-cloud-dashboard:0.9.2-2e2d8bb",
+    "invocationCount": 1684,
+    "replicas": 1,
+    "labels": {
+        "Git-Cloud": "1",
+        "Git-DeployTime": "1536738684",
+        "Git-Owner": "kenfdev",
+        "Git-Repo": "of-cloud-dashboard",
+        "Git-SHA": "2e2d8bb37b9f69da2d8118bfeb28243cabd56d5b",
+        "app": "kenfdev-dashboard",
+        "com.openfaas.scale.max": "4",
+        "com.openfaas.scale.min": "1",
+        "faas_function": "kenfdev-dashboard",
+        "uid": "406780101"
+    }
+}, {
+    "name": "kenfdev-github-stats",
+    "image": "ofcommunity/kenfdev-faas-github-stats-github-stats:0.9.1-b8074c8",
+    "invocationCount": 28,
+    "replicas": 1,
+    "labels": {
+        "Git-Cloud": "1",
+        "Git-DeployTime": "1536495470",
+        "Git-Owner": "kenfdev",
+        "Git-Repo": "faas-github-stats",
+        "Git-SHA": "b8074c878cfc31033ae00792eb47652dcfe3165b",
+        "app": "kenfdev-github-stats",
+        "com.openfaas.scale.max": "4",
+        "com.openfaas.scale.min": "1",
+        "faas_function": "kenfdev-github-stats",
+        "uid": "776783310"
+    }
+}, {
+    "name": "kenfdev-github-stats-page",
+    "image": "ofcommunity/kenfdev-faas-github-stats-github-stats-page:0.9.1-b8074c8",
+    "invocationCount": 31,
+    "replicas": 1,
+    "labels": {
+        "Git-Cloud": "1",
+        "Git-DeployTime": "1536495473",
+        "Git-Owner": "kenfdev",
+        "Git-Repo": "faas-github-stats",
+        "Git-SHA": "b8074c878cfc31033ae00792eb47652dcfe3165b",
+        "app": "kenfdev-github-stats-page",
+        "com.openfaas.scale.max": "4",
+        "com.openfaas.scale.min": "1",
+        "faas_function": "kenfdev-github-stats-page",
+        "uid": "912725985"
+    }
+}]

@@ -33,3 +33,18 @@
     margin-left: 97px;
   }
 }
+
+
+.m-t { margin-top: .5em; }
+
+.endpoint-copy { 
+   padding: 2px 6px;
+ }
+
+ .p-0 {
+   padding: 0;
+ }
+
+ .ml-1 {
+   margin-left: 5px;
+ }

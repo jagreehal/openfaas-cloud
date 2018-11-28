@@ -2,9 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAward, faUserSecret } from '@fortawesome/free-solid-svg-icons';
-
-import { FunctionInvocation } from '../FunctionInvocation';
+import {
+  faAward,
+  faCloudDownloadAlt,
+  faUserSecret
+} from '@fortawesome/free-solid-svg-icons';
 
 import { FunctionOverviewPanel } from '../FunctionOverviewPanel';
 import { ReplicasProgress } from '../ReplicasProgress';
@@ -29,7 +31,11 @@ const renderContainerImage = image => {
   }
 };
 
-const FunctionDetailSummary = ({ fn, handleShowBadgeModal }) => {
+const FunctionDetailSummary = ({
+  fn,
+  handleShowBadgeModal,
+  handleShowRunOnMyOFModal
+}) => {
   const to = `${fn.shortName}/log?repoPath=${fn.gitOwner}/${
     fn.gitRepo
   }&commitSHA=${fn.gitSha}`;
@@ -38,7 +44,23 @@ const FunctionDetailSummary = ({ fn, handleShowBadgeModal }) => {
   const deployMeta = [
     {
       label: 'Name:',
-      value: fn.shortName
+      renderValue() {
+        return (
+          <div className="d-flex align-items-start">
+            <div>{fn.shortName}</div>
+            <div className="ml-auto">
+              <Button
+                outline
+                size="xs"
+                title="Run on my OpenFaaS"
+                onClick={handleShowRunOnMyOFModal}
+              >
+                <FontAwesomeIcon icon={faCloudDownloadAlt} />
+              </Button>
+            </div>
+          </div>
+        );
+      }
     },
     {
       label: 'Image:',
@@ -119,7 +141,7 @@ const FunctionDetailSummary = ({ fn, handleShowBadgeModal }) => {
 
   return (
     <div className="FunctionDetailSummary fn-detail-summary row">
-      <div className="col-lg-4 pb-3 pb-lg-0">
+      <div className="col-lg-5 pb-3 pb-lg-0">
         <FunctionOverviewPanel
           headerText="Deployment"
           headerIcon={deployIcon}
@@ -128,7 +150,7 @@ const FunctionDetailSummary = ({ fn, handleShowBadgeModal }) => {
           <FunctionOverviewPanel.MetaList list={deployMeta} />
         </FunctionOverviewPanel>
       </div>
-      <div className="col-lg-4 pb-3 pb-lg-0">
+      <div className="col-lg-5 pb-3 pb-lg-0">
         <FunctionOverviewPanel
           headerText="Git"
           headerIcon={gitIcon}
@@ -140,19 +162,19 @@ const FunctionDetailSummary = ({ fn, handleShowBadgeModal }) => {
               xs: 12,
               sm: 3,
               md: 2,
-              lg: 5,
-              xl: 4
+              lg: 4,
+              xl: 3
             }}
           />
         </FunctionOverviewPanel>
       </div>
-      <div className="col-lg-4">
+      <div className="col-lg-2">
         <FunctionOverviewPanel
           headerText="Invocations"
           headerIcon={invocationsIcon}
+          bodyClassName="d-flex justify-content-center align-items-center"
         >
-          <FunctionInvocation data={{ '1hr': [2, 8], '24hr': [5, 9] }} />
-          {/* <h1 className="font-weight-bold">{fn.invocationCount}</h1> */}
+          <h1 className="font-weight-bold">{fn.invocationCount}</h1>
         </FunctionOverviewPanel>
       </div>
     </div>
